@@ -1,0 +1,35 @@
+######################################################
+#####          CONFIDENTIAL CONFIGURATIONS       #####
+######################################################
+# The sensitive info in the test cases will be hidden in log
+--removekeywords  tag:sensitive
+
+######################################################
+#####       MOBILE SPECIFIC CONFIGURATIONS       #####
+######################################################
+#Android needs the following:
+# browserName: the browser is used to test
+# deviceName: name or id of a simulator device or real phone
+# platformName: Either Android or iOS
+# platformVersion: The OS version of the device running on your environment
+
+--variable browserName:chrome
+--variable platformName:android
+--variable platformVersion:11
+--variable deviceName:Galaxy Note10 5G
+--variable isRealMobile:true
+--variable visual:false
+--variable network:false
+--variable console:false
+
+######################################################
+#####      EXECUTION SPECIFIC CONFIGURATIONS     #####
+######################################################
+# The following variables are mandatory to have in the config file while executing tests:
+# --include: includes the testcases with corresponding tag
+# --outputdir: used to specify location where the robot logs will be placed.
+# ./testCases/e2e/e2e.robot -> change this to the file you want to execute tests from
+#--include smoke
+--outputdir ./results/mobileweb/
+
+src/scenario/mobileWebTest.robot

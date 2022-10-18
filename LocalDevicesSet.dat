@@ -1,0 +1,17 @@
+[Device3]
+tags=device3
+udid=R5CT91ZC2VY
+appium_port=4727
+system_port=8203
+
+[Device2]
+tags=device2
+udid=emulator-5556
+appium_port=4725
+system_port=8202
+
+[Device1]
+tags=device1
+udid=emulator-5554
+appium_port=4723
+system_port=8201

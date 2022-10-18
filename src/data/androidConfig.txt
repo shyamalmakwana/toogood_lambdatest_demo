@@ -1,0 +1,37 @@
+######################################################
+#####          CONFIDENTIAL CONFIGURATIONS       #####
+######################################################
+# The sensitive info in the test cases will be hidden in log
+--removekeywords  tag:sensitive
+
+######################################################
+#####       MOBILE SPECIFIC CONFIGURATIONS       #####
+######################################################
+#Android needs the following:
+# REMOTE_URL: The address of appium server on your environment
+# deviceName: name or id of a simulator device or real phone
+# platformName: Either Android or iOS
+# platformVersion: The OS version of the device running on your environment
+
+--variable platformName:android
+--variable platformVersion:10
+--variable deviceName:Galaxy S20
+--variable isRealMobile:true
+--variable visual:true
+--variable network:false
+--variable console:false
+--variable app:lt://APP10160201651665929833436251
+
+######################################################
+#####      EXECUTION SPECIFIC CONFIGURATIONS     #####
+######################################################
+# The following variables are mandatory to have in the config file while executing tests:
+# --include: includes the testcases with corresponding tag
+# --outputdir: used to specify location where the robot logs will be placed.
+# ./testCases/e2e/e2e.robot -> change this to the file you want to execute tests from
+#--include smoke
+
+#--listener ./src/utilities/NewListener.py
+
+--outputdir ./results/android/
+src/scenario/androidTest.robot

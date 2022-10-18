@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on win32)" generated="20221017 15:46:10.638" rpa="false" schemaversion="3">
+<suite id="s1" name="iosTest" source="C:\Users\hong.le\IdeaProjects\RF-Mobile-Demo\src\scenario\iosTest.robot">
+<test id="s1-t1" name="iOS App Test On LambdaTest" line="13">
+<kw name="Open App Test" library="TestSetup" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name=Native App Test</arg>
+<arg>build=Appium Python Robot</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221017 15:46:10.985" endtime="20221017 15:46:43.100"/>
+</kw>
+<status status="PASS" starttime="20221017 15:46:10.984" endtime="20221017 15:46:43.100"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=color</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221017 15:46:43.102" level="INFO">Clicking element 'id=color'.</msg>
+<status status="PASS" starttime="20221017 15:46:43.101" endtime="20221017 15:46:44.765"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221017 15:46:44.767" level="INFO">Clicking element 'id=Text'.</msg>
+<status status="PASS" starttime="20221017 15:46:44.765" endtime="20221017 15:46:46.418"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=toast</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221017 15:46:46.420" level="INFO">Clicking element 'id=toast'.</msg>
+<status status="PASS" starttime="20221017 15:46:46.418" endtime="20221017 15:46:47.549"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=notification</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221017 15:46:47.551" level="INFO">Clicking element 'id=notification'.</msg>
+<status status="PASS" starttime="20221017 15:46:47.549" endtime="20221017 15:46:51.190"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=geoLocation</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20221017 15:46:51.192" level="INFO">Clicking element 'id=geoLocation'.</msg>
+<status status="PASS" starttime="20221017 15:46:51.191" endtime="20221017 15:46:52.440"/>
+</kw>
+<kw name="Teardown Test" library="TestSetup" type="TEARDOWN">
+<doc>release setup and close the application</doc>
+<kw name="Release Value Set" library="pabot.PabotLib">
+<doc>Release a reserved value set so that other executions can use it also.
+[https://pabot.org/PabotLib.html?ref=log#release-value-set|Open online docs.]</doc>
+<status status="PASS" starttime="20221017 15:46:52.441" endtime="20221017 15:46:52.444"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221017 15:46:52.444" endtime="20221017 15:46:52.820"/>
+</kw>
+<status status="PASS" starttime="20221017 15:46:52.441" endtime="20221017 15:46:52.820"/>
+</kw>
+<timeout value="50 minutes"/>
+<status status="PASS" starttime="20221017 15:46:10.984" endtime="20221017 15:46:52.821"/>
+</test>
+<status status="PASS" starttime="20221017 15:46:10.639" endtime="20221017 15:46:52.822"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="iosTest">iosTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

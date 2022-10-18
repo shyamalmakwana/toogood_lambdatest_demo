@@ -1,0 +1,35 @@
+######################################################
+#####          CONFIDENTIAL CONFIGURATIONS       #####
+######################################################
+# The sensitive info in the test cases will be hidden in log
+--removekeywords  tag:sensitive
+
+######################################################
+#####       MOBILE SPECIFIC CONFIGURATIONS       #####
+######################################################
+#Android needs the following:
+# REMOTE_URL: The address of appium server on your environment
+# DEVICE_NAME: The ID of the device. Get the ID of the device, simulator device or real phone
+# PLATFORM_NAME: Needed on robot config. Either Android or iOS
+# PLATFORM_VERSION: The version of the device you are running on your environment
+
+--variable browserName:safari
+--variable platformName:ios
+--variable platformVersion:14
+--variable deviceName:iPhone 12
+--variable isRealMobile:true
+--variable visual:false
+--variable network:false
+--variable console:false
+
+######################################################
+#####      EXECUTION SPECIFIC CONFIGURATIONS     #####
+######################################################
+# The following variables are mandatory to have in the config file while executing tests:
+# --include: includes the testcases with corresponding tag
+# --outputdir: used to specify location where the robot logs will be placed.
+# ./testCases/e2e/e2e.robot -> change this to the file you want to execute tests from
+#--include smoke
+--outputdir ./results/mobileweb/
+
+src/scenario/mobileWebTest.robot

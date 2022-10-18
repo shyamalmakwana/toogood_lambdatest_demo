@@ -1,0 +1,32 @@
+[Device3]
+tags=device3
+platformName=Android
+platformVersion=9
+deviceName=Pixel 3
+isRealMobile=true
+visual=true
+network=false
+console=false
+app=lt://APP10160601531665714253969239
+
+[Device2]
+tags=device1
+platformName=Android
+platformVersion=11
+deviceName=Galaxy Note20 Ultra 5G
+isRealMobile=true
+visual=true
+network=false
+console=false
+app=lt://APP10160601531665714253969239
+
+[Device1]
+tags=device1
+platformName=Android
+platformVersion=10
+deviceName=Galaxy S20
+isRealMobile=true
+visual=true
+network=false
+console=false
+app=lt://APP10160601531665714253969239
