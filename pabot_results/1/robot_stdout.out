@@ -1,0 +1,15 @@
+==============================================================================
+Scenario                                                                      
+==============================================================================
+Scenario.loginTest :: E2E test                                                
+==============================================================================
+[TC-2] The Staff User Should Logout Piersight App Successfully :: ... | FAIL |
+Element locator 'xpath=//android.widget.TextView[@text='All Investments']' did not match any elements after 30 seconds
+------------------------------------------------------------------------------
+Scenario.loginTest :: E2E test                                        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Scenario                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\pabot_results\1\output.xml

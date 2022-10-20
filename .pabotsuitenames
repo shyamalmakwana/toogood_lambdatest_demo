@@ -1,0 +1,8 @@
+datasources:c5614e5474cbf867dc7d997b52be1c2c5d009a3f
+commandlineoptions:c3f84f2c466dfa98882a1ec7f7c93a073ab5a5f9
+suitesfrom:no-suites-from-option
+file:4f6b7f2f57ec09a425107e6e8484e1e69af3efcd
+--test Scenario.loginTest.[TC-1] The Staff User Should Login Piersight App Successfully
+--test Scenario.loginTest.[TC-2] The Staff User Should Logout Piersight App Successfully
+--test Scenario.loginTest.[TC-3] The Investor User Should Login Piersight App Successfully
+--test Scenario.loginTest.[TC-4] The Investor User Should Logout Piersight App Successfully

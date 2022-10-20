@@ -1,0 +1,30 @@
+==============================================================================
+Scenario                                                                      
+==============================================================================
+Scenario.loginTest :: E2E test                                                
+==============================================================================
+[TC-4] The Investor User Should Logout Piersight App Successfully ...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\loginTest.robot:34
+    T:  [TC-4] The Investor User Should Logout Piersight App Successfully    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\loginTest.robot:40
+      And The Log In Screen Should Be Displayed    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\page\loginPage.robot:47
+      Element Text Should Be    ${label_usrname_login_mobile}    Username
+      |  ${label_usrname_login_mobile} = xpath=//android.widget.TextView[@text='Username'] (str)
+______________________________________________________________________________
+| FAIL |
+Multiple keywords with name 'Element Text Should Be' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Element Text Should Be
+    Selenium2Library.Element Text Should Be
+------------------------------------------------------------------------------
+Scenario.loginTest :: E2E test                                        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Scenario                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\pabot_results\3\output.xml

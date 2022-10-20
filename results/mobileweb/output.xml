@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221020 23:11:51.906" rpa="false" schemaversion="3">
+<suite id="s1" name="mobileWebTest" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\mobileWebTest.robot">
+<test id="s1-t1" name="Mobile Web Test On LambdaTest" line="13">
+<kw name="Open Mobile Web" library="TestSetup">
+<arg>https://lambdatest.github.io/sample-todo-app/</arg>
+<doc>Open mobile web browser with given url</doc>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${mobileWebCapilities}</var>
+<arg>browserName=${browserName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>console=${console}</arg>
+<arg>w3c=${True}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>name=Mobile Web Test</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221020 23:11:52.189" level="INFO">${mobileWebCapilities} = {'browserName': 'chrome', 'platformName': 'android', 'platformVersion': '11', 'deviceName': 'Galaxy Note10 5G', 'visual': 'false', 'network': 'false', 'console': 'false', 'w3c': True, 'isRealMobile': ...</msg>
+<status status="PASS" starttime="20221020 23:11:52.189" endtime="20221020 23:11:52.189"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>browser=${browserName}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${mobileWebCapilities}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221020 23:11:52.189" level="INFO">Opening browser 'chrome' to base url 'https://lambdatest.github.io/sample-todo-app/' through remote server at 'https://Shyamalm:xeivSNG0lWRBAww4mvWNo9IdZzY2QcoqUQ6OtiinuJIbyx3YEz@mobile-hub.lambdatest.com/wd/hub'.</msg>
+<status status="PASS" starttime="20221020 23:11:52.189" endtime="20221020 23:12:08.273"/>
+</kw>
+<status status="PASS" starttime="20221020 23:11:52.189" endtime="20221020 23:12:08.273"/>
+</kw>
+<kw name="Page should contain element">
+<arg>name:li1</arg>
+<msg timestamp="20221020 23:12:08.274" level="FAIL">Multiple keywords with name 'Page should contain element' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Page Should Contain Element
+    Selenium2Library.Page Should Contain Element
+    SeleniumLibrary.Page Should Contain Element</msg>
+<status status="FAIL" starttime="20221020 23:12:08.274" endtime="20221020 23:12:08.274"/>
+</kw>
+<kw name="Page should contain element">
+<arg>name:li2</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.275" endtime="20221020 23:12:08.275"/>
+</kw>
+<kw name="Click button">
+<arg>name:li1</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.275" endtime="20221020 23:12:08.275"/>
+</kw>
+<kw name="Click button">
+<arg>name:li2</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.276" endtime="20221020 23:12:08.276"/>
+</kw>
+<kw name="Input text">
+<arg>id:sampletodotext</arg>
+<arg>Yey Let's add it to list</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.276" endtime="20221020 23:12:08.276"/>
+</kw>
+<kw name="Click button">
+<arg>id:addbutton</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.276" endtime="20221020 23:12:08.277"/>
+</kw>
+<kw name="Get Text">
+<var>${response}</var>
+<arg>xpath=/html/body/div/div/div/ul/li[6]/span</arg>
+<status status="NOT RUN" starttime="20221020 23:12:08.277" endtime="20221020 23:12:08.277"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>Yey Let's add it to list</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20221020 23:12:08.277" endtime="20221020 23:12:08.277"/>
+</kw>
+<tag>mobileweb</tag>
+<timeout value="50 minutes"/>
+<status status="FAIL" starttime="20221020 23:11:52.189" endtime="20221020 23:12:08.278">Multiple keywords with name 'Page should contain element' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Page Should Contain Element
+    Selenium2Library.Page Should Contain Element
+    SeleniumLibrary.Page Should Contain Element</status>
+</test>
+<test id="s1-t2" name="Login Piersight On Mobile Web" line="35">
+<kw name="Open Mobile Web" library="TestSetup">
+<arg>https://dev5-phw-login.piersight.com/login</arg>
+<doc>Open mobile web browser with given url</doc>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${mobileWebCapilities}</var>
+<arg>browserName=${browserName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>console=${console}</arg>
+<arg>w3c=${True}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>name=Mobile Web Test</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221020 23:12:08.282" level="INFO">${mobileWebCapilities} = {'browserName': 'chrome', 'platformName': 'android', 'platformVersion': '11', 'deviceName': 'Galaxy Note10 5G', 'visual': 'false', 'network': 'false', 'console': 'false', 'w3c': True, 'isRealMobile': ...</msg>
+<status status="PASS" starttime="20221020 23:12:08.280" endtime="20221020 23:12:08.282"/>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>browser=${browserName}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${mobileWebCapilities}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221020 23:12:08.283" level="INFO">Opening browser 'chrome' to base url 'https://dev5-phw-login.piersight.com/login' through remote server at 'https://Shyamalm:xeivSNG0lWRBAww4mvWNo9IdZzY2QcoqUQ6OtiinuJIbyx3YEz@mobile-hub.lambdatest.com/wd/hub'.</msg>
+<status status="PASS" starttime="20221020 23:12:08.282" endtime="20221020 23:14:54.627"/>
+</kw>
+<status status="PASS" starttime="20221020 23:12:08.279" endtime="20221020 23:14:54.627"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='cosmos-login-form-user-name-field']</arg>
+<arg>${STAFF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221020 23:14:54.628" level="INFO">Typing text 'hong.le@saigontechnology.com' into text field '//input[@id='cosmos-login-form-user-name-field']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg timestamp="20221020 23:14:54.628" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<status status="FAIL" starttime="20221020 23:14:54.628" endtime="20221020 23:14:54.628"/>
+</kw>
+<msg timestamp="20221020 23:14:54.628" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg timestamp="20221020 23:14:54.629" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20221020 23:14:54.627" endtime="20221020 23:14:54.630"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='cosmos-login-form-password-field']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 23:14:54.630" endtime="20221020 23:14:54.631"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//ps-button[@id='cosmos-login-form-login-btn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 23:14:54.631" endtime="20221020 23:14:54.631"/>
+</kw>
+<tag>mobileweb</tag>
+<status status="FAIL" starttime="20221020 23:12:08.278" endtime="20221020 23:14:54.631">No browser is open.</status>
+</test>
+<kw name="Teardown Test For Web" type="TEARDOWN">
+<doc>release setup and close the application</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${REMOTE_URL}' != ''</arg>
+<arg>Execute Script</arg>
+<arg>lambda-status=passed</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Script" library="AppiumLibrary">
+<arg>lambda-status=passed</arg>
+<doc>Inject a snippet of JavaScript into the page for execution in the
+context of the currently selected frame (Web context only).</doc>
+<kw name="Capture Page Screenshot">
+<msg timestamp="20221020 23:14:54.634" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<status status="FAIL" starttime="20221020 23:14:54.634" endtime="20221020 23:14:54.634"/>
+</kw>
+<msg timestamp="20221020 23:14:54.635" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg timestamp="20221020 23:14:54.636" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20221020 23:14:54.633" endtime="20221020 23:14:54.650"/>
+</kw>
+<status status="FAIL" starttime="20221020 23:14:54.633" endtime="20221020 23:14:54.650"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221020 23:14:54.650" endtime="20221020 23:14:54.650"/>
+</kw>
+<status status="FAIL" starttime="20221020 23:14:54.632" endtime="20221020 23:14:54.650">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20221020 23:11:51.906" endtime="20221020 23:14:54.650">Suite teardown failed:
+No application is open</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">mobileweb</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="mobileWebTest">mobileWebTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221020 23:14:54.628" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg timestamp="20221020 23:14:54.635" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+</errors>
+</robot>

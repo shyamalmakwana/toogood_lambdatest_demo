@@ -1,0 +1,14 @@
+==============================================================================
+Scenario                                                                      
+==============================================================================
+Scenario.loginTest :: E2E test                                                
+==============================================================================
+[TC-3] The Investor User Should Login Piersight App Successfully :... | PASS |
+------------------------------------------------------------------------------
+Scenario.loginTest :: E2E test                                        | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Scenario                                                              | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\pabot_results\2\output.xml

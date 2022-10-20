@@ -9,11 +9,12 @@ ${STAFF}           hong.le@saigontechnology.com
 ${INVESTOR1}       hong.le+1@saigontechnology.com
 ${INVESTOR2}       hong.le+2@saigontechnology.com
 ${PASSWORD}        MyPassword1
-${APP_LAMBDA}      lt://APP10160601531665714253969239
+# ${APP_LAMBDA}      lt://APP10160601531665714253969239
+${APP_LAMBDA}      lt://APP10160202521666188016486486
 ${APP_PACKAGE}     com.piersight.mobile.dev.v2
 ${APP_ACTIVITY}    com.piersight.mobile.phw.MainActivity
-${USERNAME}        hong.le
-${ACCESSKEY}       B3DXga28aJw4htJsTbjSNxWzP21crLNpfn54niNtEnucX7tgnF
+${USERNAME}        Shyamalm
+${ACCESSKEY}       xeivSNG0lWRBAww4mvWNo9IdZzY2QcoqUQ6OtiinuJIbyx3YEz
 ${REMOTE_URL}      https://${USERNAME}:${ACCESSKEY}@mobile-hub.lambdatest.com/wd/hub
 ${LOCAL_URL}       http://127.0.0.1:{}/wd/hub
 

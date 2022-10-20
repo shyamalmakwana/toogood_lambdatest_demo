@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   Common keywords are used for Mobile Testing
-Library         AppiumLibrary    timeout=30   run_on_failure=No Operation
+Library         AppiumLibrary    timeout=30
+#Library         AppiumLibrary    timeout=30   run_on_failure=No Operation
 Library         OperatingSystem
 Library         String
 Library         Collections

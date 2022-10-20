@@ -133,11 +133,24 @@ Setup Multiple Android Devices
 Teardown Test
     [Documentation]    release setup and close the application
     Release value set
+
+#    Run keyword if  '${REMOTE_URL}' != ''
+#    ...  Report Lambdatest Status
+#    ...  ${TEST_NAME} 
+#    ...  ${TEST_STATUS}
+    
+    Run Keyword If    '${TEST_STATUS}' == 'FAIL'
+    ...    Execute Script    lambda-status=failed
+                ELSE
+    ...    Execute Script    lambda-status=passed
+
     Close Application
 
 Teardown Test And Report
     [Documentation]    release setup, close the application and report test result
     Release value set
-    Run Keyword If    '${REMOTE_URL}' != ''   Report Lambdatest Status
-    ...    ${TEST_NAME}    ${TEST_STATUS}
+#    Run Keyword If    '${REMOTE_URL}' != ''   Report Lambdatest Status
+#    ...    ${TEST_NAME}    ${TEST_STATUS}
+
+
     Close Application

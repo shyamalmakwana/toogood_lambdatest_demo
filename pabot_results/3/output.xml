@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221019 18:46:32.168" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenario" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario">
+<suite id="s1-s1" name="loginTest" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\loginTest.robot">
+<test id="s1-s1-t1" name="[TC-4] The Investor User Should Logout Piersight App Successfully" line="34">
+<kw name="Lambda Setup For Native App Parallel Execution" library="TestSetup" type="SETUP">
+<doc>Setup LambdaTest for parallel execution</doc>
+<kw name="Acquire Value Set" library="pabot.PabotLib">
+<var>${valuesetname}</var>
+<doc>Reserve a set of values for this execution.
+[https://pabot.org/PabotLib.html?ref=log#acquire-value-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.486" level="INFO">Value set "Device2" acquired</msg>
+<msg timestamp="20221019 18:46:32.486" level="INFO">${valuesetname} = Device2</msg>
+<status status="PASS" starttime="20221019 18:46:32.478" endtime="20221019 18:46:32.486"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${valuesetname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221019 18:46:32.487" level="INFO">Device2</msg>
+<status status="PASS" starttime="20221019 18:46:32.486" endtime="20221019 18:46:32.487"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${platformName}</var>
+<arg>platformName</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.488" level="INFO">${platformName} = Android</msg>
+<status status="PASS" starttime="20221019 18:46:32.487" endtime="20221019 18:46:32.488"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${platformVersion}</var>
+<arg>platformVersion</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.488" level="INFO">${platformVersion} = 11</msg>
+<status status="PASS" starttime="20221019 18:46:32.488" endtime="20221019 18:46:32.488"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${deviceName}</var>
+<arg>deviceName</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.489" level="INFO">${deviceName} = Galaxy Note20 Ultra 5G</msg>
+<status status="PASS" starttime="20221019 18:46:32.488" endtime="20221019 18:46:32.489"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${isRealMobile}</var>
+<arg>isRealMobile</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.489" level="INFO">${isRealMobile} = true</msg>
+<status status="PASS" starttime="20221019 18:46:32.489" endtime="20221019 18:46:32.489"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${visual}</var>
+<arg>visual</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.490" level="INFO">${visual} = true</msg>
+<status status="PASS" starttime="20221019 18:46:32.489" endtime="20221019 18:46:32.490"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${network}</var>
+<arg>network</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.490" level="INFO">${network} = false</msg>
+<status status="PASS" starttime="20221019 18:46:32.490" endtime="20221019 18:46:32.490"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${console}</var>
+<arg>console</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.491" level="INFO">${console} = false</msg>
+<status status="PASS" starttime="20221019 18:46:32.490" endtime="20221019 18:46:32.491"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${app}</var>
+<arg>app</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:46:32.491" level="INFO">${app} = lt://APP10160601531665714253969239</msg>
+<status status="PASS" starttime="20221019 18:46:32.491" endtime="20221019 18:46:32.491"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name=Different TCs Executed Parallel On Different Devices</arg>
+<arg>build=Appium Python Robot</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221019 18:46:32.492" endtime="20221019 18:47:01.845"/>
+</kw>
+<status status="PASS" starttime="20221019 18:46:32.477" endtime="20221019 18:47:01.845"/>
+</kw>
+<kw name="When The Investor User &quot;${INVESTOR2}&quot; Login The Piersight App" library="loginPage" sourcename="The Investor User &quot;${investor}&quot; Login The Piersight App">
+<tag>sensitive</tag>
+<doc>The Investor user should login the Piersight App successfully</doc>
+<kw name="I Input Username On Login Page" library="loginPage">
+<arg>${investor}</arg>
+<kw name="Wait until element is visible and input text" library="baseSteps">
+<arg>${txt_username_login_mobile}</arg>
+<arg>${username}</arg>
+<doc>Wait until element is visible then input text into the element text field</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:47:01.848" endtime="20221019 18:47:03.648"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:47:03.651" level="INFO">Clear text field 'xpath=//android.widget.EditText[@index='1']'</msg>
+<status status="PASS" starttime="20221019 18:47:03.648" endtime="20221019 18:47:04.844"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${text_value}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:47:04.846" level="INFO">Typing text 'hong.le+2@saigontechnology.com' into text field 'xpath=//android.widget.EditText[@index='1']'</msg>
+<status status="PASS" starttime="20221019 18:47:04.844" endtime="20221019 18:47:06.015"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20221019 18:47:06.015" endtime="20221019 18:47:06.643"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:01.847" endtime="20221019 18:47:06.644"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:01.846" endtime="20221019 18:47:06.645"/>
+</kw>
+<kw name="I Input Password On Login Page" library="loginPage">
+<arg>${PASSWORD}</arg>
+<kw name="Wait until element is visible and input text" library="baseSteps">
+<arg>${txt_password_login_mobile}</arg>
+<arg>${password}</arg>
+<doc>Wait until element is visible then input text into the element text field</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:47:06.648" endtime="20221019 18:47:07.832"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:47:07.832" level="INFO">Clear text field 'xpath=//android.widget.EditText[@text='Enter password here']'</msg>
+<status status="PASS" starttime="20221019 18:47:07.832" endtime="20221019 18:47:08.966"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${text_value}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:47:08.972" level="INFO">Typing text 'MyPassword1' into text field 'xpath=//android.widget.EditText[@text='Enter password here']'</msg>
+<status status="PASS" starttime="20221019 18:47:08.966" endtime="20221019 18:47:10.201"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20221019 18:47:10.202" endtime="20221019 18:47:10.781"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:06.647" endtime="20221019 18:47:10.782"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:06.645" endtime="20221019 18:47:10.782"/>
+</kw>
+<kw name="I Submit Credentials" library="loginPage">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>200</arg>
+<arg>1916</arg>
+<arg>200</arg>
+<arg>1226</arg>
+<arg>1000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20221019 18:47:10.784" endtime="20221019 18:47:12.604"/>
+</kw>
+<kw name="Wait Until Text Is Visible And Click Text" library="baseSteps">
+<arg>Sign In</arg>
+<doc>Wait until element is visible then click button</doc>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${text}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20221019 18:47:12.621" endtime="20221019 18:47:13.604"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20221019 18:47:13.605" endtime="20221019 18:47:14.817"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:12.620" endtime="20221019 18:47:14.818"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:10.783" endtime="20221019 18:47:14.818"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:01.846" endtime="20221019 18:47:14.819"/>
+</kw>
+<kw name="Then The Homepage Is Displayed" library="homePage">
+<doc>Verify that the Homepage is open correctly</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${label_portfolio_summary_mobile}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:47:14.820" endtime="20221019 18:47:24.043"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_portfolio_summary_mobile}</arg>
+<arg>All Investments</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221019 18:47:24.049" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text='All Investments']' contains exactly text 'All Investments'.</msg>
+<status status="PASS" starttime="20221019 18:47:24.044" endtime="20221019 18:47:25.184"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_Investments_home_mobile}</arg>
+<arg>Investments</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221019 18:47:25.184" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text='Investments']' contains exactly text 'Investments'.</msg>
+<status status="PASS" starttime="20221019 18:47:25.184" endtime="20221019 18:47:26.351"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_profile_home_mobile}</arg>
+<arg>Profile</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20221019 18:47:26.357" level="INFO">Verifying element 'xpath=//android.widget.TextView[@text='Profile' and @index='1']' contains exactly text 'Profile'.</msg>
+<status status="PASS" starttime="20221019 18:47:26.352" endtime="20221019 18:47:27.487"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:14.819" endtime="20221019 18:47:27.487"/>
+</kw>
+<kw name="And The User Sign Out Persight Mobile App" library="homePage">
+<doc>Sign out the Persight Mobile BACKGROUND APP</doc>
+<kw name="I Open Profile Options In Home Page" library="homePage">
+<doc>Click on the Profile in HomePage for More Options menu</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${label_profile_home_mobile}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:47:27.489" endtime="20221019 18:47:28.587"/>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<arg>${label_profile_home_mobile}</arg>
+<doc>Tap element identified by ``locator``. </doc>
+<status status="PASS" starttime="20221019 18:47:28.587" endtime="20221019 18:47:30.572"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:27.488" endtime="20221019 18:47:30.572"/>
+</kw>
+<kw name="I Click On &quot;Sign out&quot; Option" library="homePage" sourcename="I Click On &quot;${optionitem}&quot; Option">
+<doc>Open Profile option and click on the ${optionitem}</doc>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${optionitem}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20221019 18:47:30.576" endtime="20221019 18:47:31.640"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${optionitem}'=='Edit profile'</arg>
+<arg>Click Text</arg>
+<arg>Provision Sensors</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:31.640"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${optionitem}'=='2FA Settings'</arg>
+<arg>Click Text</arg>
+<arg>2FA Settings</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:31.640"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${optionitem}'=='Language preference'</arg>
+<arg>Click Text</arg>
+<arg>Language preference</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:31.640"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${optionitem}'=='Help &amp; Feedback'</arg>
+<arg>Click Text</arg>
+<arg>Help &amp; Feedback</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:31.640"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${optionitem}'=='Sign out'</arg>
+<arg>Click Text</arg>
+<arg>Sign out</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>Sign out</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:32.840"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:31.640" endtime="20221019 18:47:32.840"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:30.574" endtime="20221019 18:47:32.840"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:27.488" endtime="20221019 18:47:32.840"/>
+</kw>
+<kw name="And The Log In Screen Should Be Displayed" library="loginPage">
+<doc>Verify that the Login page displays correctly</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${label_usrname_login_mobile}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:47:32.857" endtime="20221019 18:47:34.635"/>
+</kw>
+<kw name="Element Text Should Be">
+<arg>${label_usrname_login_mobile}</arg>
+<arg>Username</arg>
+<msg timestamp="20221019 18:47:34.637" level="FAIL">Multiple keywords with name 'Element Text Should Be' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Element Text Should Be
+    Selenium2Library.Element Text Should Be</msg>
+<status status="FAIL" starttime="20221019 18:47:34.636" endtime="20221019 18:47:34.637"/>
+</kw>
+<kw name="Element Text Should Be">
+<arg>${label_pass_login_mobile}</arg>
+<arg>Password</arg>
+<status status="NOT RUN" starttime="20221019 18:47:34.638" endtime="20221019 18:47:34.640"/>
+</kw>
+<kw name="Element Text Should Be">
+<arg>${btn_signin_login_mobile}</arg>
+<arg>Sign In</arg>
+<status status="NOT RUN" starttime="20221019 18:47:34.640" endtime="20221019 18:47:34.640"/>
+</kw>
+<kw name="Element Text Should Be">
+<arg>${label_forgotpass_login_mobile}</arg>
+<arg>Forgot Password?</arg>
+<status status="NOT RUN" starttime="20221019 18:47:34.642" endtime="20221019 18:47:34.642"/>
+</kw>
+<kw name="Capture Page Screenshot">
+<status status="NOT RUN" starttime="20221019 18:47:34.643" endtime="20221019 18:47:34.644"/>
+</kw>
+<status status="FAIL" starttime="20221019 18:47:32.856" endtime="20221019 18:47:34.645"/>
+</kw>
+<kw name="Teardown Test" library="TestSetup" type="TEARDOWN">
+<doc>release setup and close the application</doc>
+<kw name="Release Value Set" library="pabot.PabotLib">
+<doc>Release a reserved value set so that other executions can use it also.
+[https://pabot.org/PabotLib.html?ref=log#release-value-set|Open online docs.]</doc>
+<status status="PASS" starttime="20221019 18:47:34.648" endtime="20221019 18:47:34.651"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221019 18:47:34.651" endtime="20221019 18:47:34.971"/>
+</kw>
+<status status="PASS" starttime="20221019 18:47:34.647" endtime="20221019 18:47:34.971"/>
+</kw>
+<doc>Test case demo 4</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20221019 18:46:32.476" endtime="20221019 18:47:34.972">Multiple keywords with name 'Element Text Should Be' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Element Text Should Be
+    Selenium2Library.Element Text Should Be</status>
+</test>
+<doc>E2E test</doc>
+<status status="FAIL" starttime="20221019 18:46:32.202" endtime="20221019 18:47:34.986"/>
+</suite>
+<status status="FAIL" starttime="20221019 18:46:32.190" endtime="20221019 18:47:34.988"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Scenario">Scenario</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="loginTest">Scenario.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

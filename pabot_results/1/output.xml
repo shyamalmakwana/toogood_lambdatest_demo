@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221019 18:45:16.656" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenario" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario">
+<suite id="s1-s1" name="loginTest" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\loginTest.robot">
+<test id="s1-s1-t1" name="[TC-2] The Staff User Should Logout Piersight App Successfully" line="20">
+<kw name="Lambda Setup For Native App Parallel Execution" library="TestSetup" type="SETUP">
+<doc>Setup LambdaTest for parallel execution</doc>
+<kw name="Acquire Value Set" library="pabot.PabotLib">
+<var>${valuesetname}</var>
+<doc>Reserve a set of values for this execution.
+[https://pabot.org/PabotLib.html?ref=log#acquire-value-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.990" level="INFO">Value set "Device3" acquired</msg>
+<msg timestamp="20221019 18:45:16.990" level="INFO">${valuesetname} = Device3</msg>
+<status status="PASS" starttime="20221019 18:45:16.985" endtime="20221019 18:45:16.990"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${valuesetname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221019 18:45:16.991" level="INFO">Device3</msg>
+<status status="PASS" starttime="20221019 18:45:16.990" endtime="20221019 18:45:16.991"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${platformName}</var>
+<arg>platformName</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.991" level="INFO">${platformName} = Android</msg>
+<status status="PASS" starttime="20221019 18:45:16.991" endtime="20221019 18:45:16.991"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${platformVersion}</var>
+<arg>platformVersion</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.992" level="INFO">${platformVersion} = 9</msg>
+<status status="PASS" starttime="20221019 18:45:16.991" endtime="20221019 18:45:16.992"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${deviceName}</var>
+<arg>deviceName</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.992" level="INFO">${deviceName} = Pixel 3</msg>
+<status status="PASS" starttime="20221019 18:45:16.992" endtime="20221019 18:45:16.992"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${isRealMobile}</var>
+<arg>isRealMobile</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.992" level="INFO">${isRealMobile} = true</msg>
+<status status="PASS" starttime="20221019 18:45:16.992" endtime="20221019 18:45:16.992"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${visual}</var>
+<arg>visual</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.993" level="INFO">${visual} = true</msg>
+<status status="PASS" starttime="20221019 18:45:16.993" endtime="20221019 18:45:16.993"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${network}</var>
+<arg>network</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.993" level="INFO">${network} = false</msg>
+<status status="PASS" starttime="20221019 18:45:16.993" endtime="20221019 18:45:16.993"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${console}</var>
+<arg>console</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.993" level="INFO">${console} = false</msg>
+<status status="PASS" starttime="20221019 18:45:16.993" endtime="20221019 18:45:16.993"/>
+</kw>
+<kw name="Get Value From Set" library="pabot.PabotLib">
+<var>${app}</var>
+<arg>app</arg>
+<doc>Get a value from previously reserved value set.
+[https://pabot.org/PabotLib.html?ref=log#get-value-from-set|Open online docs.]</doc>
+<msg timestamp="20221019 18:45:16.994" level="INFO">${app} = lt://APP10160601531665714253969239</msg>
+<status status="PASS" starttime="20221019 18:45:16.994" endtime="20221019 18:45:16.994"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name=Different TCs Executed Parallel On Different Devices</arg>
+<arg>build=Appium Python Robot</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221019 18:45:16.994" endtime="20221019 18:45:38.869"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:16.984" endtime="20221019 18:45:38.869"/>
+</kw>
+<kw name="When The Staff User &quot;STAFF&quot; Login The Piersight App" library="loginPage" sourcename="The Staff User &quot;${staff}&quot; Login The Piersight App">
+<tag>sensitive</tag>
+<doc>The staff user should login the Piersight App successfully</doc>
+<kw name="I Input Username On Login Page" library="loginPage">
+<arg>${staff}</arg>
+<kw name="Wait until element is visible and input text" library="baseSteps">
+<arg>${txt_username_login_mobile}</arg>
+<arg>${username}</arg>
+<doc>Wait until element is visible then input text into the element text field</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:45:38.871" endtime="20221019 18:45:41.276"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:45:41.278" level="INFO">Clear text field 'xpath=//android.widget.EditText[@index='1']'</msg>
+<status status="PASS" starttime="20221019 18:45:41.276" endtime="20221019 18:45:42.109"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${text_value}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:45:42.115" level="INFO">Typing text 'STAFF' into text field 'xpath=//android.widget.EditText[@index='1']'</msg>
+<status status="PASS" starttime="20221019 18:45:42.110" endtime="20221019 18:45:43.726"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20221019 18:45:43.726" endtime="20221019 18:45:45.074"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:38.870" endtime="20221019 18:45:45.075"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:38.870" endtime="20221019 18:45:45.075"/>
+</kw>
+<kw name="I Input Password On Login Page" library="loginPage">
+<arg>${PASSWORD}</arg>
+<kw name="Wait until element is visible and input text" library="baseSteps">
+<arg>${txt_password_login_mobile}</arg>
+<arg>${password}</arg>
+<doc>Wait until element is visible then input text into the element text field</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20221019 18:45:45.078" endtime="20221019 18:45:45.949"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:45:45.955" level="INFO">Clear text field 'xpath=//android.widget.EditText[@text='Enter password here']'</msg>
+<status status="PASS" starttime="20221019 18:45:45.949" endtime="20221019 18:45:46.769"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${text_value}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20221019 18:45:46.771" level="INFO">Typing text 'MyPassword1' into text field 'xpath=//android.widget.EditText[@text='Enter password here']'</msg>
+<status status="PASS" starttime="20221019 18:45:46.769" endtime="20221019 18:45:48.323"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20221019 18:45:48.324" endtime="20221019 18:45:49.384"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:45.076" endtime="20221019 18:45:49.384"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:45.075" endtime="20221019 18:45:49.385"/>
+</kw>
+<kw name="I Submit Credentials" library="loginPage">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>200</arg>
+<arg>1916</arg>
+<arg>200</arg>
+<arg>1226</arg>
+<arg>1000</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20221019 18:45:49.386" endtime="20221019 18:45:51.010"/>
+</kw>
+<kw name="Wait Until Text Is Visible And Click Text" library="baseSteps">
+<arg>Sign In</arg>
+<doc>Wait until element is visible then click button</doc>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${text}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20221019 18:45:51.012" endtime="20221019 18:45:52.188"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${text}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20221019 18:45:52.188" endtime="20221019 18:45:53.070"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:51.011" endtime="20221019 18:45:53.071"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:49.385" endtime="20221019 18:45:53.071"/>
+</kw>
+<status status="PASS" starttime="20221019 18:45:38.869" endtime="20221019 18:45:53.072"/>
+</kw>
+<kw name="Then The Homepage Is Displayed" library="homePage">
+<doc>Verify that the Homepage is open correctly</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${label_portfolio_summary_mobile}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20221019 18:46:24.805" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2028"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2028]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.LinearLayout" text="" resource-id="com.piersight.mobile.dev.v2:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+            &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                      &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                        &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                          &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                            &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true" /&gt;
+                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                  &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                    &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                      &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                        &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                          &lt;android.widget.FrameLayout index="0" package="com.piersight.mobile.dev.v2" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                            &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true" /&gt;
+                                                &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                  &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                    &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                      &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                        &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2028]" displayed="true"&gt;
+                                                          &lt;android.widget.ProgressBar index="0" package="com.piersight.mobile.dev.v2" class="android.widget.ProgressBar" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[489,996][591,1098]" displayed="true" /&gt;
+                                                        &lt;/android.view.ViewGroup&gt;
+                                                        &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,132][278,249]" displayed="true"&gt;
+                                                          &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,132][278,249]" displayed="true"&gt;
+                                                            &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,132][278,249]" displayed="true"&gt;
+                                                              &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="EN - CA" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[69,166][209,215]" displayed="true" /&gt;
+                                                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[209,157][275,224]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[209,157][275,224]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                          &lt;/android.view.ViewGroup&gt;
+                                                        &lt;/android.view.ViewGroup&gt;
+                                                        &lt;android.widget.ImageView index="2" package="com.piersight.mobile.dev.v2" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[252,374][828,441]" displayed="true" /&gt;
+                                                        &lt;android.widget.TextView index="3" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Hello from PortfolioHiWay" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,566][1036,615]" displayed="true" /&gt;
+                                                        &lt;android.widget.ScrollView index="4" package="com.piersight.mobile.dev.v2" class="android.widget.ScrollView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,659][1080,1932]" displayed="true"&gt;
+                                                          &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,659][1080,1932]" displayed="true"&gt;
+                                                            &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,659][1036,685]" displayed="true"&gt;
+                                                              &lt;android.widget.EditText index="1" package="com.piersight.mobile.dev.v2" class="android.widget.EditText" text="STAFF" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[91,659][989,683]" displayed="true" /&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                            &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,772][1036,906]" displayed="true"&gt;
+                                                              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[80,772][238,793]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Password" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,772][227,793]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.widget.EditText index="1" package="com.piersight.mobile.dev.v2" class="android.widget.EditText" text="•••••••••••" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="true" scrollable="false" selected="false" bounds="[91,775][923,904]" displayed="true" /&gt;
+                                                              &lt;android.view.ViewGroup index="2" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,806][988,873]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,806][988,873]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                            &lt;android.view.ViewGroup index="2" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,993][1036,1127]" displayed="true"&gt;
+                                                              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[80,993][275,1014]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Environment" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,993][264,1014]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" resource-id="android_touchable_wrapper" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,996][923,1125]" displayed="true"&gt;
+                                                                &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,996][923,1125]" displayed="true"&gt;
+                                                                  &lt;android.widget.EditText index="0" package="com.piersight.mobile.dev.v2" class="android.widget.EditText" text="DEV" resource-id="text_input" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[91,996][923,1125]" displayed="true" /&gt;
+                                                                &lt;/android.view.ViewGroup&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="2" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1027][988,1094]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1027][988,1094]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                            &lt;android.view.ViewGroup index="3" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,1214][1036,1349]" displayed="true"&gt;
+                                                              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[80,1214][196,1235]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Tenant" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1214][185,1235]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" resource-id="android_touchable_wrapper" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1217][923,1346]" displayed="true"&gt;
+                                                                &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1217][923,1346]" displayed="true"&gt;
+                                                                  &lt;android.widget.EditText index="0" package="com.piersight.mobile.dev.v2" class="android.widget.EditText" text="PortfolioHiWay" resource-id="text_input" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[91,1217][923,1346]" displayed="true" /&gt;
+                                                                &lt;/android.view.ViewGroup&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="2" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1248][988,1315]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1248][988,1315]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                            &lt;android.view.ViewGroup index="4" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,1435][1036,1570]" displayed="true"&gt;
+                                                              &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[80,1435][286,1456]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="User Account" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1435][275,1456]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" resource-id="android_touchable_wrapper" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1438][923,1567]" displayed="true"&gt;
+                                                                &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[91,1438][923,1567]" displayed="true"&gt;
+                                                                  &lt;android.widget.EditText index="0" package="com.piersight.mobile.dev.v2" class="android.widget.EditText" text="Dlev No2" resource-id="text_input" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[91,1438][923,1567]" displayed="true" /&gt;
+                                                                &lt;/android.view.ViewGroup&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                              &lt;android.view.ViewGroup index="2" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="false" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1469][988,1536]" displayed="true"&gt;
+                                                                &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[922,1469][988,1536]" displayed="true" /&gt;
+                                                              &lt;/android.view.ViewGroup&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                            &lt;android.widget.TextView index="5" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Forgot Password?" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[370,1646][710,1695]" displayed="true" /&gt;
+                                                            &lt;android.view.ViewGroup index="6" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[318,1791][762,1887]" displayed="true"&gt;
+                                                              &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Sign In" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[485,1818][595,1860]" displayed="true" /&gt;
+                                                            &lt;/android.view.ViewGroup&gt;
+                                                          &lt;/android.view.ViewGroup&gt;
+                                                        &lt;/android.widget.ScrollView&gt;
+                                                        &lt;android.view.ViewGroup index="5" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1932][1080,2028]" displayed="true"&gt;
+                                                          &lt;android.view.ViewGroup index="0" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,1932][1036,2028]" displayed="true"&gt;
+                                                            &lt;android.widget.TextView index="0" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="v.2.3.1." checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[44,1961][136,1999]" displayed="true" /&gt;
+                                                            &lt;android.widget.TextView index="1" package="com.piersight.mobile.dev.v2" class="android.widget.TextView" text="Powered by" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[593,1960][790,2002]" displayed="true" /&gt;
+                                                            &lt;android.widget.ImageView index="2" package="com.piersight.mobile.dev.v2" class="android.widget.ImageView" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[790,1953][1035,2008]" displayed="true" /&gt;
+                                                          &lt;/android.view.ViewGroup&gt;
+                                                        &lt;/android.view.ViewGroup&gt;
+                                                      &lt;/android.view.ViewGroup&gt;
+                                                    &lt;/android.view.ViewGroup&gt;
+                                                  &lt;/android.view.ViewGroup&gt;
+                                                &lt;/android.view.ViewGroup&gt;
+                                              &lt;/android.view.ViewGroup&gt;
+                                            &lt;/android.view.ViewGroup&gt;
+                                          &lt;/android.widget.FrameLayout&gt;
+                                        &lt;/android.view.ViewGroup&gt;
+                                        &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true" /&gt;
+                                      &lt;/android.view.ViewGroup&gt;
+                                    &lt;/android.view.ViewGroup&gt;
+                                  &lt;/android.view.ViewGroup&gt;
+                                &lt;/android.view.ViewGroup&gt;
+                              &lt;/android.view.ViewGroup&gt;
+                            &lt;/android.view.ViewGroup&gt;
+                          &lt;/android.view.ViewGroup&gt;
+                        &lt;/android.widget.FrameLayout&gt;
+                      &lt;/android.view.ViewGroup&gt;
+                      &lt;android.view.ViewGroup index="1" package="com.piersight.mobile.dev.v2" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,220]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.view.ViewGroup&gt;
+            &lt;/android.widget.FrameLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20221019 18:46:24.818" endtime="20221019 18:46:24.819"/>
+</kw>
+<msg timestamp="20221019 18:46:24.820" level="FAIL">Element locator 'xpath=//android.widget.TextView[@text='All Investments']' did not match any elements after 30 seconds</msg>
+<status status="FAIL" starttime="20221019 18:45:53.073" endtime="20221019 18:46:24.820"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_portfolio_summary_mobile}</arg>
+<arg>All Investments</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221019 18:46:24.821" endtime="20221019 18:46:24.821"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_Investments_home_mobile}</arg>
+<arg>Investments</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221019 18:46:24.821" endtime="20221019 18:46:24.821"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${label_profile_home_mobile}</arg>
+<arg>Profile</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20221019 18:46:24.822" endtime="20221019 18:46:24.822"/>
+</kw>
+<status status="FAIL" starttime="20221019 18:45:53.072" endtime="20221019 18:46:24.822"/>
+</kw>
+<kw name="And The User Sign Out Persight Mobile App" library="homePage">
+<doc>Sign out the Persight Mobile BACKGROUND APP</doc>
+<status status="NOT RUN" starttime="20221019 18:46:24.823" endtime="20221019 18:46:24.823"/>
+</kw>
+<kw name="And The Log In Screen Should Be Displayed" library="loginPage">
+<doc>Verify that the Login page displays correctly</doc>
+<status status="NOT RUN" starttime="20221019 18:46:24.823" endtime="20221019 18:46:24.823"/>
+</kw>
+<kw name="Teardown Test" library="TestSetup" type="TEARDOWN">
+<doc>release setup and close the application</doc>
+<kw name="Release Value Set" library="pabot.PabotLib">
+<doc>Release a reserved value set so that other executions can use it also.
+[https://pabot.org/PabotLib.html?ref=log#release-value-set|Open online docs.]</doc>
+<status status="PASS" starttime="20221019 18:46:24.824" endtime="20221019 18:46:24.826"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221019 18:46:24.826" endtime="20221019 18:46:25.160"/>
+</kw>
+<status status="PASS" starttime="20221019 18:46:24.823" endtime="20221019 18:46:25.161"/>
+</kw>
+<doc>Test case demo 2</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20221019 18:45:16.983" endtime="20221019 18:46:25.161">Element locator 'xpath=//android.widget.TextView[@text='All Investments']' did not match any elements after 30 seconds</status>
+</test>
+<doc>E2E test</doc>
+<status status="FAIL" starttime="20221019 18:45:16.683" endtime="20221019 18:46:25.164"/>
+</suite>
+<status status="FAIL" starttime="20221019 18:45:16.656" endtime="20221019 18:46:25.168"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Scenario">Scenario</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="loginTest">Scenario.loginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

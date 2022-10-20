@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221021 01:29:03.744" rpa="false" schemaversion="3">
+<suite id="s1" name="androidTest" source="C:\Users\shyamalm\Desktop\Training\Toogood\lambdatest-demo\src\scenario\androidTest.robot">
+<test id="s1-t1" name="Android App Test On LambdaTest" line="15">
+<kw name="Open App Test" library="TestSetup" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name=Native App Test</arg>
+<arg>build=Appium Python Robot</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20221021 01:29:04.019" endtime="20221021 01:29:18.720"/>
+</kw>
+<status status="PASS" starttime="20221021 01:29:04.019" endtime="20221021 01:29:18.720"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=Browser</arg>
+<doc>Click element identified by `locator`.</doc>
+<kw name="Capture Page Screenshot">
+<status status="FAIL" starttime="20221021 01:29:19.538" endtime="20221021 01:29:19.540"/>
+</kw>
+<msg timestamp="20221021 01:29:18.722" level="INFO">Clicking element 'id=Browser'.</msg>
+<msg timestamp="20221021 01:29:19.540" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg timestamp="20221021 01:29:19.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg timestamp="20221021 01:29:19.541" level="FAIL">ValueError: Element locator 'id=Browser' did not match any elements.</msg>
+<status status="FAIL" starttime="20221021 01:29:18.721" endtime="20221021 01:29:19.542"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=url</arg>
+<arg>https://lambdatest.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20221021 01:29:19.543" endtime="20221021 01:29:19.543"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=find</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20221021 01:29:19.543" endtime="20221021 01:29:19.543"/>
+</kw>
+<kw name="Teardown Test" library="TestSetup" type="TEARDOWN">
+<doc>release setup and close the application</doc>
+<kw name="Release Value Set" library="pabot.PabotLib">
+<doc>Release a reserved value set so that other executions can use it also.
+[https://pabot.org/PabotLib.html?ref=log#release-value-set|Open online docs.]</doc>
+<status status="PASS" starttime="20221021 01:29:19.544" endtime="20221021 01:29:19.548"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Execute Script</arg>
+<arg>lambda-status=failed</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Script" library="AppiumLibrary">
+<arg>lambda-status=failed</arg>
+<doc>Inject a snippet of JavaScript into the page for execution in the
+context of the currently selected frame (Web context only).</doc>
+<status status="PASS" starttime="20221021 01:29:19.549" endtime="20221021 01:29:20.901"/>
+</kw>
+<status status="PASS" starttime="20221021 01:29:19.548" endtime="20221021 01:29:20.901"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20221021 01:29:20.902" endtime="20221021 01:29:21.167"/>
+</kw>
+<status status="PASS" starttime="20221021 01:29:19.544" endtime="20221021 01:29:21.167"/>
+</kw>
+<timeout value="50 minutes"/>
+<status status="FAIL" starttime="20221021 01:29:04.018" endtime="20221021 01:29:21.169">ValueError: Element locator 'id=Browser' did not match any elements.</status>
+</test>
+<status status="FAIL" starttime="20221021 01:29:03.745" endtime="20221021 01:29:21.170"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="androidTest">androidTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221021 01:29:19.541" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+</errors>
+</robot>

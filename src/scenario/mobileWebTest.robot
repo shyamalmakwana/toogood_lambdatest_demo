@@ -14,11 +14,23 @@ Mobile Web Test On LambdaTest
     [Tags]      mobileweb
     [Timeout]   ${TIMEOUT}
 	Open Mobile Web  https://lambdatest.github.io/sample-todo-app/
-	SeleniumLibrary.Page Should Contain  LambdaTest Sample App
-	SeleniumLibrary.Click Button  name:li1	
-	SeleniumLibrary.Click Button  name:li2	
-	SeleniumLibrary.Input Text    id:sampletodotext  Let's add them to list
-	SeleniumLibrary.Click Button  id:addbutton
+#	SeleniumLibrary.Page Should Contain  LambdaTest Sample App
+#	SeleniumLibrary.Click Button  name:li1	
+#	SeleniumLibrary.Click Button  name:li2	
+#	SeleniumLibrary.Input Text    id:sampletodotext  Let's add them to list
+#	SeleniumLibrary.Click Button  id:addbutton
+
+	Page should contain element  name:li1
+	Page should contain element  name:li2
+
+	Click button  name:li1	
+	Click button  name:li2	
+		
+	Input text  id:sampletodotext  Yey Let's add it to list
+	Click button  id:addbutton
+	${response}    Get Text    xpath=/html/body/div/div/div/ul/li[6]/span
+	Should Be Equal As Strings    ${response}    Yey Let's add it to list
+
 
 Login Piersight On Mobile Web
     [Tags]      mobileweb
@@ -31,5 +43,6 @@ Login Piersight On Mobile Web
 *** Keywords ***
 Teardown Test For Web
     [Documentation]    release setup and close the application
-    # Run Keyword If    '${REMOTE_URL}' != ''    Report Lambdatest Status    ${TEST_NAME}    ${TEST_STATUS}
+     Run Keyword If    '${REMOTE_URL}' != ''
+    	...    Execute Script    lambda-status=passed
     SeleniumLibrary.Close All Browsers
